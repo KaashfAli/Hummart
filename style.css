@@ -87,6 +87,12 @@ main {
     height: 6vh;
     font-weight: 400;
 }
+.menubtn{
+    display: none;
+}
+.click-menubtn{
+    display: none;
+}
 
 /* Navbar with section complete */
 
@@ -381,6 +387,12 @@ a {
     footer{
         flex-direction: column;
     }
+    .navlast>img{
+        padding: 0px 12px;
+    }  
+    .menubtn{
+        margin-right: 20px;
+    }
 }
 @media (max-width: 1200px){
 .carasol {
@@ -427,5 +439,69 @@ a {
     }
     .div>button{
         margin-left: 25px;
+    }
+}
+@media (max-width:990px){
+    .navlast{
+        justify-content: space-between;
+    }
+
+    .navlast > input,
+    .cart{
+        display: none;
+    }
+    .menubtn{
+        display: block;
+        margin-right: 50px;
+    }
+    .navbar-toggle{
+        padding: 5px 10px;
+        background-color: #fff;
+        font-size: 25px;
+    }
+    .menubtn{
+        display: block;
+    }
+    .click-menubtn{
+        display:flex;
+        flex-direction: column;
+        background-color: rgb(246, 246, 246);
+        /* padding-left: 40px; */
+        overflow: hidden;
+        align-items:center;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 1s ease, opacity 1s ease;
+    }
+    .click-menubtn.active{
+        max-height: 95px;
+        opacity: 1;
+    }
+    .click-menubtn>input{
+        width: 85%;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    .menucart{
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+        padding-left: 50px;
+        padding-top: 10px;
+    }
+    .menucart-icon {
+        font-size: 24px;
+        /* margin-left: -80px; */
+        cursor: pointer;
+    }
+    
+    .menucart-count {
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        padding: 2px 6px;
+        margin-left: -7px;
+        margin-top: -30px;
+        cursor: pointer;
     }
 }
